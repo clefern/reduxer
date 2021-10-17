@@ -1,9 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { store } from './redux/redux-config';
-
 function App() {
-  console.log(store.getState())
   return (
     <div className="App">
       <header className="App-header">
@@ -18,10 +15,16 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </a>z
       </header>
     </div>
   );
 }
 
+
+
+
 export default App;
+
+
+

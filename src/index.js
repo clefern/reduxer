@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+import App from './App';
+import { store, first, second } from './Apps/InitialRedux';
+import { AdminInfo, AuthInfo } from './Apps/AdminInfo';
+import { Provider } from 'react-redux';
+import ConnectedExpenseList from './components/ExpenseList';
+
+console.log(store);
+
+const jsx = (
+  <Provider store={store}>
+    <ConnectedExpenseList/>
+  </Provider>
+)
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  jsx,
   document.getElementById('root')
 );
 
