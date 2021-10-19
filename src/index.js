@@ -3,18 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-
 import App from './App';
 import { store, first, second } from './Apps/InitialRedux';
 import { AdminInfo, AuthInfo } from './Apps/AdminInfo';
 import { Provider } from 'react-redux';
-import ConnectedExpenseList from './components/ExpenseList';
+import ExpensePage from './components/expense/ExpensePage';
 
 console.log(store);
 
 const jsx = (
   <Provider store={store}>
-    <ConnectedExpenseList/>
+    <ExpensePage/>
   </Provider>
 )
 
